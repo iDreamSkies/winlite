@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>WinLite</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Набор иконок WinLite: линейный стиль 24×24, штрих 1.8 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9z"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3.5 10v4a1 1 0 001 1H8l8.5 4V5L8 9H4.5a1 1 0 00-1 1z"/><path d="M19.5 9.5a4 4 0 010 5"/><path d="M8 15l1.2 4.2a1 1 0 001 .8h.6a1 1 0 001-1.2L11 16.5"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5V12M12 12l-5.4 5M12 12l5.4 5"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24"><path d="M14 4.5h4a2 2 0 012 2v11a2 2 0 01-2 2h-4"/><path d="M3.5 12H14"/><path d="M10 8l4 4-4 4"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.2 17.5a8.5 8.5 0 1115.6 0"/><path d="M12 13.5l4-4.5"/><circle cx="12" cy="13.5" r="1.3"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M8 10.5v4M6 12.5h4"/><circle cx="15.5" cy="11.5" r=".8"/><circle cx="18" cy="13.7" r=".8"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11.5A8 8 0 106.3 17.7"/><path d="M20 4.5v7h-7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4.2l9 15.6H3z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 108.5-8.5A8.5 8.5 0 005.8 6"/><path d="M3.5 4v4h4"/><path d="M12 8v4.2l2.8 1.8"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5"/><circle cx="12" cy="8" r=".6"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 2.7v5.6c0 4.5-3 8-7.5 9.7-4.5-1.7-7.5-5.2-7.5-9.7V5.7z"/><path d="M8.8 12.2l2.3 2.3 4.2-4.6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></symbol>
+    <symbol id="i-broom" viewBox="0 0 24 24"><path d="M19.5 4L12 11.5"/><path d="M10.4 9.9l3.7 3.7c-.9 3.3-3.7 5.8-7.4 6.4-.4-3.8 1.4-7.6 3.7-10.1z"/><path d="M9 14.5l2 2"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3.5v8"/><path d="M6.8 6.7a7.5 7.5 0 1010.4 0"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <!-- ───── боковая панель ───── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+      <img class="brand-mark" src="logo.png" alt="WinLite" width="42" height="42">
+      <div class="brand-txt"><b>WinLite</b><span>Оптимизатор Windows</span></div>
+      <button class="collapse-btn" id="collapseBtn" title="Свернуть панель"><svg class="i" width="16" height="16"><use href="#i-chevron-left"/></svg></button>
+    </div>
+
+    <nav class="side-nav" id="nav">
+      <button class="nav-item active" data-view="dashboard" title="Обзор"><svg class="i" width="19" height="19"><use href="#i-grid"/></svg><span class="nav-text">Обзор</span></button>
+      <button class="nav-item" data-view="quick" title="Быстрая чистка"><svg class="i" width="19" height="19"><use href="#i-broom"/></svg><span class="nav-text">Быстрая чистка</span></button>
+      <button class="nav-item" data-view="services" title="Службы Windows"><svg class="i" width="19" height="19"><use href="#i-cog"/></svg><span class="nav-text">Службы Windows</span><span class="nav-badge warn" id="badgeServices"></span></button>
+      <button class="nav-item" data-view="privacy" title="Приватность и реклама"><svg class="i" width="19" height="19"><use href="#i-shield"/></svg><span class="nav-text">Приватность</span><span class="nav-badge warn" id="badgePrivacy"></span></button>
+      <button class="nav-item" data-view="backups" title="Резервные копии"><svg class="i" width="19" height="19"><use href="#i-history"/></svg><span class="nav-text">Резервные копии</span><span class="nav-badge" id="backupCount"></span></button>
+      <button class="nav-item" data-view="startup" title="Автозагрузка"><svg class="i" width="19" height="19"><use href="#i-power"/></svg><span class="nav-text">Автозагрузка</span><span class="nav-badge warn" id="badgeStartup"></span></button>
+    </nav>
+
+    <div class="side-foot">
+      <div class="sys-card" id="sysCard">
+        <div class="sys-row"><span>ОС</span><b id="sysOs">…</b></div>
+        <div class="sys-row"><span>ОЗУ</span><b id="sysRam">…</b></div>
+        <div class="meter"><i id="sysBar"></i></div>
+        <div class="sys-row"><span>Службы</span><b id="sysSvc">…</b></div>
+      </div>
+      <button class="ver-line" id="verBtn" title="О программе и сведения для отчёта об ошибке"><span id="verText">WinLite</span><span class="ver-tag">бета</span></button>
+      <div class="side-actions">
+        <span class="admin-pill" id="adminBadge" title="Права, с которыми запущена программа"><span class="dot"></span><span id="adminText"></span></span>
+        <button class="icon-btn" id="rescan" title="Пересканировать систему"><svg class="i" width="17" height="17"><use href="#i-refresh"/></svg></button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ───── основная область ───── -->
+  <div class="main">
+    <div id="adminBanner" class="banner" hidden>
+      Программа запущена <b>без прав администратора</b>: просмотр доступен, но применять изменения и откатывать нельзя. Закройте её и запустите от имени администратора.
+    </div>
+
+    <main class="content">
+      <!-- Обзор -->
+      <section class="view active" id="view-dashboard"><div id="dashboard"></div></section>
+
+      <!-- Быстрая чистка -->
+      <section class="view" id="view-quick">
+        <div class="page-title">
+          <div>
+            <span class="eyebrow">БЫСТРЫЕ СЦЕНАРИИ</span>
+            <h1>Что хотите почистить?</h1>
+            <p>Выберите сценарии. Перед применением WinLite покажет полный список изменений и создаст точку восстановления.</p>
+          </div>
+          <div class="selection-summary"><strong id="selectedCount">0</strong><span>выбрано</span></div>
+        </div>
+        <div class="scenario-grid" id="scenarioGrid"></div>
+      </section>
+
+      <!-- Службы -->
+      <section class="view services-view" id="view-services">
+        <div class="services-main">
+          <div class="stats-row" id="stats"></div>
+          <div class="toolbar">
+            <div class="search-wrap"><svg class="i" width="16" height="16"><use href="#i-search"/></svg><input id="search" type="search" placeholder="Поиск по названию, имени или описанию…  ( / )" autocomplete="off"></div>
+            <div class="segmented" id="filters">
+              <button data-f="all" class="active">Все</button>
+              <button data-f="known">С описанием</button>
+              <button data-f="rec">Можно оптимизировать</button>
+              <button data-f="running">Работают</button>
+              <button data-f="mine">Мои изменения</button>
+            </div>
+          </div>
+          <div class="service-table">
+            <div class="table-scroll">
+              <div class="service-head"><span>СЛУЖБА</span><span>СОСТОЯНИЕ</span><span>ЗАПУСК</span><span class="c-rec">РЕКОМЕНДАЦИЯ</span><span>ИЗМЕНИТЬ НА</span></div>
+              <div id="rows"></div>
+              <div id="empty" class="empty" hidden>Ничего не найдено</div>
+            </div>
+          </div>
+          <div class="legend">
+            <span><i class="sdot safe"></i> безопасно</span>
+            <span><i class="sdot caution"></i> зависит от сценария</span>
+            <span><i class="sdot critical"></i> системная</span>
+            <span><i class="sdot"></i> нет данных</span>
+            <div class="grow"></div>
+            <label class="expert"><input type="checkbox" id="expert"> Разрешить менять службы без описания (для опытных)</label>
+          </div>
+        </div>
+        <aside class="inspector" id="detail"></aside>
+      </section>
+
+      <!-- Приватность -->
+      <section class="view" id="view-privacy">
+        <div class="page-title">
+          <div>
+            <span class="eyebrow">НАСТРОЙКИ WINDOWS</span>
+            <h1>Приватность и реклама</h1>
+            <p>Реклама и слежка в Windows живут не только в службах, но и в настройках. Отмечайте только то, что нужно: у каждой настройки указаны последствия.</p>
+          </div>
+          <div class="selection-summary"><strong id="selectedTweaks">0</strong><span>выбрано</span></div>
+        </div>
+        <div id="tweakList" class="tweak-wrap"></div>
+      </section>
+
+      <!-- Автозагрузка -->
+      <section class="view" id="view-startup">
+        <div class="page-title">
+          <div>
+            <span class="eyebrow">ЗАПУСК WINDOWS</span>
+            <h1>Автозагрузка программ</h1>
+            <p>Программы, которые стартуют вместе с Windows и занимают память. Отключение работает так же, как в Диспетчере задач: ничего не удаляется, программу можно запустить вручную или включить обратно в любой момент.</p>
+          </div>
+          <div class="selection-summary"><strong id="selectedStartup">0</strong><span>выбрано</span></div>
+        </div>
+        <div class="stats-row startup-stats" id="startupStats"></div>
+        <div id="startupList" class="startup-list"></div>
+      </section>
+
+      <!-- Резервные копии -->
+      <section class="view" id="view-backups">
+        <div class="page-title">
+          <div>
+            <span class="eyebrow">БЕЗОПАСНОСТЬ</span>
+            <h1>Резервные копии и откат</h1>
+            <p>Перед каждым применением WinLite сохраняет прежнее состояние служб и настроек. Любую копию можно откатить одной кнопкой.</p>
+          </div>
+        </div>
+        <div id="backupList" class="backup-list"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="sticky-action" id="bar">
+  <div class="bar-left"><span class="bar-count" id="barCount">0</span><div><strong id="barTitle">Выбрано изменений</strong><span>Ничего не будет изменено без подтверждения.</span></div></div>
+  <div class="bar-right"><button id="clearPending" class="btn ghost">Сбросить</button><button id="review" class="btn primary">Проверить изменения</button></div>
+</div>
+
+<div id="modal" class="modal" hidden>
+  <div class="dialog">
+    <h2 id="mTitle"></h2>
+    <div id="mBody" class="mbody"></div>
+    <div class="mfoot">
+      <label id="mRpWrap" class="chk"><input type="checkbox" id="mRp" checked> Создать точку восстановления Windows</label>
+      <div class="grow"></div>
+      <button id="mCancel" class="btn ghost">Отмена</button>
+      <button id="mOk" class="btn primary">Применить</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="kb.js"></script>
+<script src="presets.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
